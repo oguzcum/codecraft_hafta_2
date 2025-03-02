@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapılacaklar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d5f22ee4f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="ta-container">
+      <h1>Yapılacaklar</h1>
+      <form id="taskform">
+        <div id="error" style="color: red;"></div>
+        <div class="input-wrapper">
+          <label for="title">Başlık:</label>
+          <input type="text" id="title" required>
+          <label for="description">Açıklama:</label>
+          <textarea id="description"></textarea>
+          <label>Öncelik:</label>
+          <div class="priority-options">
+            <label><input type="radio" name="priority" value="Düşük" required> Düşük</label>
+            <label><input type="radio" name="priority" value="Orta"> Orta</label>
+            <label><input type="radio" name="priority" value="Yüksek"> Yüksek</label>
+          </div>
+          <button type="submit">Ekle</button>
+        </div>
+      </form>
+      <h2>Görevler</h2>
+      <button id="filterCompleted">Sadece tamamlananları göster</button>
+      <button id="sortPriority">Önceliğe Göre Sırala</button>
+      <div id="taskList"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
